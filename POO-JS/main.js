@@ -1,5 +1,27 @@
 console.log("Script funcionando");
 
+// -----------------------------------------------------------------------------------
+// 9.1 PARADIGMA
+
+// EJEMPLO
+
+console.log('        EJEMPLO 9.1');
+
+class Persona {
+  constructor ( nombre, edad ) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+  saludar () {
+    console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} anios.`);
+  }
+}
+
+const persona1 = new Persona('Juan', 25);
+persona1.saludar();
+
+console.log('        RETO    9.1');
+
 class Auto {
     constructor(nCarro, marca, modelo, anio) {
         this.nCarro = nCarro;
@@ -21,8 +43,14 @@ auto1.mostrarInfo();
 auto2.mostrarInfo();
 auto3.mostrarInfo();
 
-// -----------------------------------------------------------------------------------
+console.log("");
 
+// -----------------------------------------------------------------------------------
+// 9.2 FUNCION CONSTRUCTORA
+
+console.log('        EJEMPLO 9.2');
+
+console.log('        RETO    9.1');
 function carro(marca, modelo, año) {
   this.marca = marca;
   this.modelo = modelo;
@@ -33,6 +61,9 @@ console.log(carro1.marca);
 console.log(carro1.modelo); 
 console.log(carro1.año);
 
+console.log("");
 
+// -----------------------------------------------------------------------------------
+// 9.3 CONTEXTO
 
 
