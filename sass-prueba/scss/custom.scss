@@ -1,0 +1,12 @@
+// scss/custom.scss// Importa los archivos SCSS de Bootstrap
+@import"../node_modules/bootstrap/scss/bootstrap";
+
+// Personaliza las variables de Bootstrap
+$primary: #7900be;
+$danger: #18ffe0;
+
+// Sobrescribe los colores del tema
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);

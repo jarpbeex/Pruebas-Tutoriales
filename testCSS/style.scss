@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100vh; // para que el body ocupe todo el tamano de la pantalla
+  padding: 20px;
+}
+
+.grid-container > * { // estilos para los hijos de .grid-container
+  box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.74);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500; // peso de la fuente
+}
+
+.grid-container { // grid-container es para el body
+  display: grid; // definimos el display que usara
+  gap: 20px; // interlineado entre elementos
+  grid-template:
+  "header" 
+  "navbar"
+  "main"
+  "sidebar"
+  "footer"
+  ;
+  .header {
+    grid-area: header;
+    background-color: #ff8181;
+  }
+  .navbar{
+    grid-area: navbar;
+    background-color: #9eff51;
+  }
+  .sidebar{
+    grid-area: sidebar;
+    background-color: #51ffee;
+  }
+  .main{
+    grid-area: main;
+    background-color: #fffff;
+  }
+  .footer{
+    grid-area: footer;
+    background-color: #ffff51;
+  }
+
+  @media (min-width: 768px) {
+    grid-template:
+    "header navbar" 50px
+    "header navbar" 50px
+    "sidebar main" auto
+    "footer footer" 100px / 
+    200px auto
+    ;
+  }
+
+  @media (min-width: 992px) {
+    grid-template:
+    "header header header"
+    "navbar main sidebar"
+    "footer footer footer" /
+    200px auto 200px;
+  }
+
+}
